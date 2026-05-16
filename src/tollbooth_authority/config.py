@@ -1,0 +1,35 @@
+"""Configuration via pydantic-settings. Loaded at runtime, never at import time."""
+
+from __future__ import annotations
+
+from pydantic_settings import BaseSettings
+
+
+class AuthoritySettings(BaseSettings):
+    """All env vars for the Tollbooth Authority — North America service."""
+
+    # TheBrain vault for operator ledger persistence
+    thebrain_api_key: str = ""
+    thebrain_vault_brain_id: str = ""
+    thebrain_vault_home_id: str = ""
+
+    # Upstream Authority chain
+    # Empty = Prime Authority (self-sourced supply).
+    upstream_authority_address: str = ""
+
+    # Certificate TTL
+    certificate_ttl_seconds: int = 600
+
+    # NeonVault (replaces TheBrainVault for ledger persistence)
+    neon_database_url: str = ""
+
+    # Nostr audit (optional — enabled when all 3 are set)
+    tollbooth_nostr_audit_enabled: str = ""
+    tollbooth_nostr_operator_nsec: str = ""
+    tollbooth_nostr_relays: str = ""
+
+    # DPYC Registry enforcement (URL comes from tollbooth-dpyc DEFAULT_REGISTRY_URL)
+    dpyc_registry_cache_ttl_seconds: int = 300
+    dpyc_enforce_membership: bool = False  # opt-in; safe default
+
+    model_config = {"env_file": ".env", "extra": "ignore"}
