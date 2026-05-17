@@ -1,7 +1,5 @@
 """Tollbooth Authority — North America regional certifier."""
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
-from tollbooth_authority.actor import AuthorityActor
-
-__all__ = ["AuthorityActor", "__version__"]
+__all__ = ["__version__"]

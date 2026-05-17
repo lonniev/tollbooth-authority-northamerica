@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.4.0] — 2026-05-16
+
+### Changed — collapse to thin wheel consumer (mirrors canonical 0.9.0)
+
+Adopts the `tollbooth.authority` mixin from tollbooth-dpyc 0.22.0.
+Identical refactor to canonical tollbooth-authority @ 80e7c35:
+
+- `server.py` shrinks from ~1000 lines to ~80 (actor-specific config only)
+- 8 modules deleted (actor, config, nostr_signing, onboarding, registry,
+  replay, role_migration, tenant_provisioner) — code lives in
+  `tollbooth.authority.*`
+- `AuthorityActor` re-export from package `__init__.py` removed (no
+  external consumers)
+
+The Authority's identity (npub via env), display name, instructions,
+and Neon region stay actor-specific. Everything else is the wheel's
+problem now.
+
+Pin bumped to `tollbooth-dpyc[nostr]==0.22.0`.
+
+
 ## [0.3.0] — 2026-05-16
 
 ### Changed — escalate onboarding to registered parent (mirrors canonical 0.8.0)
