@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.3.0] — 2026-05-16
+
+### Changed — escalate onboarding to registered parent (mirrors canonical 0.8.0)
+
+`confirm_authority_claim` / `check_authority_approval` no longer
+hardcode Prime. Now use the wheel's `resolve_my_parent_npub` which
+walks dpyc-community: for NorthAmerica the parent IS Prime so behavior
+is unchanged, but the protocol is now generalized so sub-Authorities
+like NewEngland can escalate to NA instead.
+
+Pin bumped to `tollbooth-dpyc[nostr]==0.20.0`. Local
+`_resolve_prime_npub` deleted. `OnboardingChallenge.prime_npub` →
+`parent_npub`.
+
 ## [0.2.0] — 2026-05-16
 
 ### Changed — adopt tollbooth-dpyc v0.19.0, drop local proof helper
