@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+- chore: track tollbooth-dpyc through 0.45.4 (pin advanced from 0.44.15) — SDK now carries deferred-courtship adoption (0.45.0) and the refund-on-raise UX fix that surfaces tool-input errors as `tool_input_invalid` (0.45.3). No wire-API changes here; Authority behavior is unchanged.
+- docs: add a DPYC ecosystem section to the README listing all federation repos, including the newcomer `cypher-mcp` (monetized graph answers) certified under this Authority.
+
 ## [0.4.1] — 2026-06-11
 - chore: track tollbooth-dpyc through 0.44.15 — SDK audit hardening (correctness fixes for credit-tranche expiration in 0.44.9 and proof-reply handling in 0.44.10; blocking mypy + coverage gates). No wire-API changes.
 

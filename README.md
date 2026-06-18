@@ -36,6 +36,30 @@ Two secrets required by FastMCP Cloud (Horizon):
 
 Everything else — BTCPay credentials for the cashier, operator credential templates — arrives via Secure Courier post-deploy (see [`docs/how-to-add-authority.md`](https://github.com/lonniev/dpyc-community/blob/main/docs/how-to-add-authority.md) in the community repo).
 
+## The DPYC Ecosystem
+
+DPYC is a federation of independent, SSE-based MCP servers sharing one Lightning-funded economy. This Authority certifies operators across the network. Sibling repos:
+
+**Core & governance**
+- [`tollbooth-dpyc`](https://github.com/lonniev/tollbooth-dpyc) — shared Python SDK (crypto, vault, auth, pricing, audit)
+- [`dpyc-community`](https://github.com/lonniev/dpyc-community) — governance registry (members, rulebook, CI validation)
+- [`dpyc-oracle`](https://github.com/lonniev/dpyc-oracle) — free community concierge (membership, onboarding, tax-rate questions)
+- [`tollbooth-authority`](https://github.com/lonniev/tollbooth-authority) — canonical certification Authority
+- [`tollbooth-sample`](https://github.com/lonniev/tollbooth-sample) — reference Operator implementation
+- [`tollbooth-pricing-studio`](https://github.com/lonniev/tollbooth-pricing-studio) — native pricing editor (Swift/iOS)
+
+**Operators (paid MCP services)**
+- [`cypher-mcp`](https://github.com/lonniev/cypher-mcp) — monetized graph answers via named Cypher templates over Neo4j/AuraDB (certified under this Authority)
+- [`schwab-mcp`](https://github.com/lonniev/schwab-mcp) — Charles Schwab brokerage data
+- [`thebrain-mcp`](https://github.com/lonniev/thebrain-mcp) — TheBrain knowledge-graph access
+- [`excalibur-mcp`](https://github.com/lonniev/excalibur-mcp) — X/Twitter posting
+- [`taxsort-mcp`](https://github.com/lonniev/taxsort-mcp) — tax classification + Cloudflare Pages UI
+- [`optionality-mcp`](https://github.com/lonniev/optionality-mcp) — options analytics
+
+**Utilities & advocates**
+- [`tollbooth-oauth2-collector`](https://github.com/lonniev/tollbooth-oauth2-collector) — shared OAuth2 callback collector
+- [`tollbooth-shortlinks`](https://github.com/lonniev/tollbooth-shortlinks) — URL shortener
+
 ## License
 
 Apache-2.0
