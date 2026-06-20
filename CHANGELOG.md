@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
-- chore: track tollbooth-dpyc through 0.45.4 (pin advanced from 0.44.15) — SDK now carries deferred-courtship adoption (0.45.0) and the refund-on-raise UX fix that surfaces tool-input errors as `tool_input_invalid` (0.45.3). No wire-API changes here; Authority behavior is unchanged.
+- **chore: track tollbooth-dpyc through 0.49.0 — REQUIRED for the operator bootstrap NIP-33 switchover.** 0.49.0 publishes operator bootstrap config as a NIP-33 kind-30078 replaceable event (no longer ages off relays) instead of a kind-4 DM. Cold switchover, no fallback: an operator on ≥0.49.0 reads *only* kind-30078, so every Authority MUST be ≥0.49.0 to publish a readable config; re-run `get_operator_config`/`register_operator` per operator after deploy. Pin `tollbooth-dpyc[nostr]==0.49.0`. (Also carried since 0.45.4: deferred-courtship adoption, the 0.45.3 refund-on-raise fix, the 0.47.0 dunning.) No wire-API changes here.
 - docs: add a DPYC ecosystem section to the README listing all federation repos, including the newcomer `cypher-mcp` (monetized graph answers) certified under this Authority.
 
 ## [0.4.1] — 2026-06-11
