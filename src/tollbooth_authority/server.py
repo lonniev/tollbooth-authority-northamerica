@@ -64,12 +64,16 @@ mcp = FastMCP(
 )
 
 # ======================================================================
-# OperatorRuntime — Authority is a trust root (purchase_mode=direct)
+# OperatorRuntime — self-provisions its Neon (vault_source=env); certify-up
+# mode is derived from the registry chain (purchase_mode=auto): a sub-Authority
+# under a regional Authority certifies up to its parent, a penultimate
+# Authority under Prime self-funds.
 # ======================================================================
 
 runtime = OperatorRuntime(
     tool_registry={**STANDARD_IDENTITIES, **AUTHORITY_TOOL_REGISTRY},
-    purchase_mode="direct",  # Authority is trust root — no upstream cert
+    vault_source="env",     # Authority arrives with its own Neon
+    purchase_mode="auto",   # derive direct/certified from the registry chain
     service_name="Tollbooth Authority — North America",
     ots_enabled=True,
     operator_credential_template=OPERATOR_CREDENTIAL_TEMPLATE,
