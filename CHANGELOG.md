@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
-- **chore: track tollbooth-dpyc through 0.49.0 — REQUIRED for the operator bootstrap NIP-33 switchover.** 0.49.0 publishes operator bootstrap config as a NIP-33 kind-30078 replaceable event (no longer ages off relays) instead of a kind-4 DM. Cold switchover, no fallback: an operator on ≥0.49.0 reads *only* kind-30078, so every Authority MUST be ≥0.49.0 to publish a readable config; re-run `get_operator_config`/`register_operator` per operator after deploy. Pin `tollbooth-dpyc[nostr]==0.49.0`. (Also carried since 0.45.4: deferred-courtship adoption, the 0.45.3 refund-on-raise fix, the 0.47.0 dunning.) No wire-API changes here.
+
+## [0.4.2] — 2026-06-22
+
+### Changed — consume SDK 0.52.0 (vault_source/purchase_mode decoupling)
+
+- **chore: track tollbooth-dpyc through 0.52.0.** Picks up the vault_source/purchase_mode decoupling: NorthAmerica Authority now explicitly uses `vault_source="env"` (self-provision Neon from env) and `purchase_mode="auto"` (derive direct/certified from registry chain; resolves to "direct" under Prime). No wire-API changes. The server.py comments clarify NorthAmerica's regional-Authority position.
+- Previously tracked: **0.49.0 — REQUIRED for the operator bootstrap NIP-33 switchover.** Cold switchover with no fallback; after deploy, re-run `get_operator_config`/`register_operator` per operator. (Also carried: deferred-courtship adoption, the 0.45.3 refund-on-raise fix, the 0.47.0 dunning.)
 - docs: add a DPYC ecosystem section to the README listing all federation repos, including the newcomer `cypher-mcp` (monetized graph answers) certified under this Authority.
 
 ## [0.4.1] — 2026-06-11
