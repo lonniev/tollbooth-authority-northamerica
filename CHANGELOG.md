@@ -5,6 +5,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.5.1] — 2026-07-09
+- chore: track tollbooth-dpyc **0.62.1** — security-hardening batch: invoice-owner check on credit settlement, GCM credential vault, encrypted self-provisioning ledger (which especially benefits Authorities), and no plaintext audit. Pin bump + uv.lock regen with no wire-API change here.
+
 ## [0.5.0] — 2026-06-29
 - chore: track tollbooth-dpyc **0.57.0** — the SDK unifies the Secure Courier possession token under one name `dpop_token` (retiring `proof`/`proof_token`/`poison`). This regional Authority's proof handling lives entirely in the wheel's `authority/tools.py` (renamed there), so this is a pin bump + uv.lock regen with no wire-API change here. Picks up the wheel's free `patron_auth` probe and proof-vs-credential flow cross-references.
 
