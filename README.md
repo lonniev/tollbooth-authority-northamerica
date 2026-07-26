@@ -21,13 +21,13 @@ A peer-level Authority under DPYC Prime, serving North American operators. Opera
 
 ## Architecture
 
-This repository is a thin consumer of the [`tollbooth-dpyc`](https://github.com/lonniev/tollbooth-dpyc) wheel's `tollbooth.authority` extension (wheel ≥ 0.22.1). The entire deployable surface lives in `src/tollbooth_authority/server.py` (~80 lines): a FastMCP instance, an OperatorRuntime, and two `register_*_tools(mcp, runtime)` calls. Onboarding state machine, Schnorr signer, replay tracker, Neon tenant provisioning, and the 10 Authority @tool definitions are wheel-resident and shared with every other Authority MCP in the ecosystem.
+This repository is a thin consumer of the [`tollbooth-dpyc`](https://github.com/lonniev/tollbooth-dpyc) wheel's `tollbooth.authority` extension (wheel ≥ 0.22.1). The entire deployable surface lives in `src/tollbooth_authority/server.py` (~90 lines): a FastMCP instance, an OperatorRuntime, and two `register_*_tools(mcp, runtime)` calls. Onboarding state machine, Schnorr signer, replay tracker, Neon tenant provisioning, and the 16 Authority @tool definitions are wheel-resident and shared with every other Authority MCP in the ecosystem.
 
 For the protocol semantics, certificate format (Schnorr/NIP-33 kind 30079), fee cascade, registry enforcement, and tool catalog, see the canonical [`tollbooth-authority`](https://github.com/lonniev/tollbooth-authority#mcp-tools) README — this repo is identical in behavior, distinct only in identity, region, and Neon tenant.
 
 ## Deploy
 
-Two secrets required by FastMCP Cloud (Horizon):
+Two secrets required by Horizon:
 
 | Env var | Value |
 |---|---|
