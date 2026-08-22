@@ -43,6 +43,15 @@ page. Extraction now accepts either style.
 
 ## [Unreleased]
 
+## [0.5.5] — 2026-08-22
+
+### Changed — track tollbooth-dpyc 0.87.1
+
+Picks up the relay-reliability work: `COURIER_RELAY_UNREACHABLE` so an
+unreachable pinned rendezvous is no longer reported as the patron never
+replying, relay-failure reporting to the Oracle, and a publish that counts
+only when the relay acknowledges that exact event.
+
 ## [0.5.1] — 2026-07-09
 - chore: track tollbooth-dpyc **0.62.1** — security-hardening batch: invoice-owner check on credit settlement, GCM credential vault, encrypted self-provisioning ledger (which especially benefits Authorities), and no plaintext audit. Pin bump + uv.lock regen with no wire-API change here.
 
