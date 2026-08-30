@@ -1,6 +1,13 @@
 {
-  "name": "Tollbooth Authority — North America",
-  "server": "src/tollbooth_authority/server.py",
+  "name": "Tollbooth Authority \u2014 North America",
+  "source": {
+    "path": "src/tollbooth_authority/server.py",
+    "entrypoint": "mcp"
+  },
+  "environment": {
+    "type": "uv",
+    "project": "."
+  },
   "deployment": {
     "env": {
       "TOLLBOOTH_NOSTR_OPERATOR_NSEC": "${TOLLBOOTH_NOSTR_OPERATOR_NSEC}",
