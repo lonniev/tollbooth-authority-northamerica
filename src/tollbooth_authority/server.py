@@ -80,6 +80,9 @@ runtime = OperatorRuntime(
     service_name="Tollbooth Authority — North America",
     ots_enabled=True,
     operator_credential_template=OPERATOR_CREDENTIAL_TEMPLATE,
+    # Connections authenticate as holders: each npub proven through one stays
+    # with it, so tool calls pass only the npub.
+    holder_auth_url="https://tollbooth-authority-northamerica.fastmcp.app",
 )
 
 # ======================================================================
