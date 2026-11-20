@@ -1,7 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.lonniev/tollbooth-authority-northamerica",
+  "title": "Tollbooth Authority North America",
   "description": "Tollbooth Authority \u2014 North America regional certifier",
+  "websiteUrl": "https://cafe.tollbooth-dpyc.com/products/tollbooth-authority-north-america",
   "version": "0.6.0",
   "repository": {
     "url": "https://github.com/lonniev/tollbooth-authority-northamerica",
