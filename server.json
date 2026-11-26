@@ -4,7 +4,7 @@
   "title": "Tollbooth Authority North America",
   "description": "Tollbooth Authority — North America regional certifier",
   "websiteUrl": "https://cafe.tollbooth-dpyc.com/products/tollbooth-authority-north-america",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "repository": {
     "url": "https://github.com/lonniev/tollbooth-authority-northamerica",
     "source": "github"
